@@ -146,13 +146,13 @@
   <!-- Menu Toggle Script -->
   <script>
     getContent = function(t){
-      $("#ani").show();
+      $("#ani").show("slow");
     $.ajax({
       url:t,
       type:"get",
       success:function(data){
         setTimeout(function(){
-        $("#ani").hide();
+        $("#ani").hide("slow");
           $("#target").html(data)
           },2000)
       }
