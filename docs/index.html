@@ -151,8 +151,10 @@
       url:t,
       type:"get",
       success:function(data){
+        setTimeout(function(){
         $("#ani").hide();
           $("#target").html(data)
+          },2000)
       }
     })
   }
