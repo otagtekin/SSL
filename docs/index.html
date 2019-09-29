@@ -126,7 +126,9 @@
       <div class="container-fluid">
   
         <div class="editor-rendered-content text-block__content">
-          <div id="target"></div>
+          <div id="target">
+            <img id="ani" src="css/ani.gif"/>
+          </div>
 
 </div></p>
       </div>
@@ -143,10 +145,12 @@
   <!-- Menu Toggle Script -->
   <script>
     getContent = function(t){
+      $("#ani").show();
     $.ajax({
       url:t,
       type:"get",
       success:function(data){
+        $("#ani").hide();
           $("#target").html(data)
       }
     })
