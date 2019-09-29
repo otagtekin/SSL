@@ -38,6 +38,9 @@ body {
 }
 
 @media (min-width: 768px) {
+  #menu-toggle{
+    display: none;
+  }
   #sidebar-wrapper {
     margin-left: 0;
   }
@@ -47,10 +50,23 @@ body {
     width: 100%;
   }
 
-  #wrapper.toggled #sidebar-wrapper {
-    margin-left: -15rem;
-  }
+
 }
+@media (max-width: 768px) {
+    #wrapper.toggled #sidebar-wrapper {
+    margin-left: 0px;
+  }
+  #menu-toggle{
+    display: block!important}
+  }
+  #burger{display: block!important}
+  }
 p{font-size: 14px;
     color: #636262;
+}
+
+.btn-primary {
+    color: white;
+    background-color: #cc4b00;
+    border-color: ;#cc4b00
 }
