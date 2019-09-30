@@ -3,7 +3,14 @@
  * Copyright 2013-2019 Start Bootstrap
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-simple-sidebar/blob/master/LICENSE)
  */
- .logo {
+ p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 13px;
+    color: gray;
+}
+
+.logo {
     color: #cc4b00;text-align: center;
 }
 
