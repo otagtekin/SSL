@@ -9,13 +9,25 @@
     font-size: 13px;
     color: gray;
 }
+a {
+    color: #cd4b02;
+    text-decoration: none;
+    background-color: transparent;
+}
 
+dl, ol, ul {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 14px;
+    color: gray;
+}
 .logo {
     color: #cc4b00;text-align: center;
 }
 
 body {
   overflow-x: hidden;
+  color:gray;
 }
 
 #sidebar-wrapper {
