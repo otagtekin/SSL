@@ -1,0 +1,76 @@
+
+<span style="color: #cc4b00;font-weight: bold;">File Operations with c</span><br><br>
+
+<p>
+C is extermely similar is again similar to JavaScript but it is a compiled language. It suoported in almost every platform since, it is native to most Operating systems.
+</p>
+<span class="code">
+You have to define types with C
+<br> You can see the different variable types here https://www.learn-c.org/en/Variables_and_Types
+<br>char str[] = "Mike"; ;
+<br>printf(b); //printf is used to outout the information on the screen.
+</span>
+<p class="code">
+C is a compiled language so your environment must have the C compiler installed, inorder to test the following code. I am using gcc there are others as well. You can pick any of them. Your installation of the Linux already have them both. Let's try it out.
+</p>
+<p class="code">
+
+#include<stdio.h> 
+    
+<br>int main(void) { // void since we are not returning anything 
+<br>&nbsp;&nbsp;//int because C compiler requires a type
+<br>&nbsp;&nbsp;printf("Hello, world!\n");
+   
+<br>}
+<br>
+<br>to test this code we need to compile with gcc
+<br>so will compile it like >>gcc -o test test.c
+<br>now we have a compile program called test
+<br>run it like so >>./test
+</p>
+
+<p class="code">
+#include<stdio.h> 
+    
+<br>int main() { // void since we are not returning anything 
+<br>&nbsp;&nbsp;//int because C compiler requires a type
+<br>char arr[2][100] =
+<br>{ "array of c string",
+<br>"is fun to use",
+<br>};
+<br>printf("%s\n",arr[0] );
+<br>}
+</p>
+
+
+<p class="code">
+This is what c conditionals look like
+</p>
+<p class="code">
+x = 5
+<br>if x > 2
+<br>&nbsp;&nbsp;puts "x is greater than 2"
+<br>elsif x <= 2 and x!=0
+<br>&nbsp;&nbsp;puts "x is 1"
+<br>else
+<br>&nbsp;&nbsp;puts "Don't know"
+<br>end
+</p>
+<p class="code">
+Little bit of OOP with c
+</p>
+<p class="code">
+
+class Dog
+ <br>&nbsp;&nbsp;def initialize()
+ <br>&nbsp;&nbsp;&nbsp;&nbsp;@age=24 #@this is an instance variable
+ <br>end
+ <br>def getAge
+ <br>&nbsp;&nbsp;&nbsp;&nbsp;return @age
+ <br>end
+<br>end
+<br>myDog = Dog.new
+<br>print(myDog.getAge())
+</p>
+<p>Now let's do some file operations and learn how to write to a file. You can get into the c command line by typing </p><p class="code">>>irb</p><p> and than start writing code. Exit the command line by</p> <p class="code">exit()</p><p>or create a file with the extension "myfile.rb". Get this file executing by typine</p> <p class="code">>>c myfile.rb</p>
+
