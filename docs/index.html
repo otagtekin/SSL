@@ -28,7 +28,7 @@
       
     SSL WDD353</div>
       <div class="list-group list-group-flush">
-        <a href="javascript:void(0)" onClick="getContent('welcome.html')" class="list-group-item list-group-item-action bg-light selected">Welcome</a>
+        <a href="javascript:void(0)" onClick="getContent('welcome.html')" class="list-group-item list-group-item-action bg-light">Welcome</a>
         <a href="javascript:void(0)" onClick="getContent('courseinfo.html')" class="list-group-item list-group-item-action bg-light">Course Information</a>
         <a href="javascript:void(0)" onClick="getContent('degree.html')" class="list-group-item list-group-item-action bg-light">Degree Information</a>
         <a href="javascript:void(0)" onClick="getContent('academic.html')" class="list-group-item list-group-item-action bg-light">Academic Honesty</a>
@@ -141,9 +141,9 @@
       $("#wrapper").toggleClass("toggled");
     });
 
-    $(".list-group-item").eq(0).attr('style', 'background-color: #e8e8e8 !important');
+    $(".list-group-item").eq(0).click();
 
-    getContent("welcome.html");
+    //getContent("welcome.html");
   </script>
 
 </body>
