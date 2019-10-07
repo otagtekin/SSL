@@ -1,0 +1,28 @@
+<span style="color: #cc4b00;font-weight: bold;">Web Server</span><br><br>
+
+<p>
+	<b>HTTP</b>
+	<br>
+	http module is a built-in core functionality for node, we cann use the module to handle requests and also serve HTML pages. It is built-on so we don't have to install anything. All we have to do is to use require('http')
+	
+</p>
+	<span class="code">
+		<br> var http = require('http');
+	</span>
+	<p dir="ltr" class="btitle">Requests</p>
+	<p>
+		Now we are ready monitor all the other requests in the url and the data that are being submitted. This is where GET, POST, and other request types come into the picture.
+	</p>
+
+	<p dir="ltr" class="btitle">require('fs')</p>
+	<p>
+		We will also use the file system (require('fs');) again with our server to read the contents of the target page and present it to the client.
+	</p>
+	
+	<p dir="ltr" class="btitle">require('path')</p>
+	<p>
+		Finally, since we are going read the contents of the local files with our web server, we need our path module.(require('path')). 
+</p>
+<p>
+	Now let's put it all together and show users our target web pages.
+</p>
