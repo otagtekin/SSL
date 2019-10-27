@@ -2,8 +2,35 @@
 
 <p>
 	<b>Requests</b>
-	
+	<br>
+	Before continuing to the content, I recommend you to read about the requests types here <a href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html">https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html</a>
+	HTTP requests are the main functionality in WEB devlopment. When it comes to Node.js there are a various ways to make HTTP requests and handle the responses. Node comes with
+	a built in "http or https" library. This library let's us make http calls and handles the return response.  
 </p>
+
+<br> my nodejs file requests.js, to run it >> node requests.js
+<span class="code">
+var http = require('http'); 
+http.get(
+	<Br>&nbsp;&nbsp;'http://httpbin.org/ip',
+			<Br>&nbsp;&nbsp;function(response) {
+				<Br>&nbsp;&nbsp;var str="";
+					<Br>&nbsp;&nbsp;response.setEncoding('utf8');
+						<Br>&nbsp;&nbsp;esponse.on('data', function(data){
+							<Br>&nbsp;&nbsp;// still getting data so keep stoaring to a variable
+								<Br>&nbsp;&nbsp;str += data;
+
+									<Br>&nbsp;&nbsp;});
+										<Br>&nbsp;&nbsp;response.on('end', function() {
+											<Br>&nbsp;&nbsp;result = JSON.parse(str);
+												<Br>&nbsp;&nbsp;console.log(result.origin)
+													<Br>&nbsp;&nbsp;});
+  });
+
+
+</span>
+
+
 <p>
 	<b>Sync</b>
 	

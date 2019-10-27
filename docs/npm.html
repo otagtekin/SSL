@@ -12,8 +12,40 @@
 <p>
 	<b>Express</b><br>
 	Express is web application framework design for node. You can take a look at the documentation here. <a href="https://expressjs.com/">Express</a>
+	<br> This is where you start building MEAN (Mongo,Express, Angular,Node) stack apps. You don't have to use Angular since there are a lots of alternatives available today.
 </p>
+
+<p>Once you install Express using the framework is pretty easy</p>
+
+
+
+<span class="code">
+var express=require('express'); // tell our application we will use express framework so bring the source
+<Br>
+var app=express();  // tell our application that use the framework's features by referring to "app"
+<Br>
+app.get('/',function(req,res) // tell framework that when someone types the root domain name or localhost use this action
+<Br>{
+	<Br>&nbsp;&nbsp;res.send('Hello SSL Students!'); // show users a message when the get("/") is called
+<Br>});
+<Br>var server=app.listen(3000,function() {}); // start the server by using the previous instructions.
+
+</span>
 <p>
 	<b>Nodemon</b><br>
-	
+	Nodemon is service that monitors your node application and detects changes to your code. If there is change in the code it automaticsally restarts the server saving you from manually 
+	doing the work.
 </p>
+<p>https://www.npmjs.com/package/nodemon</p>
+<span class="code">
+	>> npm install nodemon;
+	<br> global install
+	npm install -g nodemon
+	<br>
+	to start server
+	<br>
+	nodemon app.js 
+	<br>
+	or<br>
+	nodemon server.js
+</span>
