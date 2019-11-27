@@ -10,8 +10,8 @@
 
 <br> my nodejs file requests.js, to run it >> node requests.js
 <span class="code">
-var http = require('http'); 
-http.get(
+		<br>var http = require('http'); 
+<br>http.get(
 	<Br>&nbsp;&nbsp;'http://httpbin.org/ip',
 			<Br>&nbsp;&nbsp;function(response) {
 				<Br>&nbsp;&nbsp;var str="";
@@ -32,10 +32,13 @@ http.get(
 
 
 <p>
-	<b>Sync</b>
-	
+	<b>Sync</b><br>
+	Nodejs designed to use non-blocking, asynchronous, methods to make requests or read large content. However, sometimes you will need to wait for an answer before you complete the next step. In this 
+	case blocking, sycnhronous, calls are needed. Here is a sample sycnhronous call.
+	<br><br>
+	Take a look at <a target="_blank" href="https://medium.com/@tedwgross/sync-async-speak-english-please-6f21d47134c">this </a>article explaining the difference between these calls. 
 </p>
 <p>
-	<b>Async</b>
-	
+	<b>Async</b><br>
+	Here is a sample of asynchronous call.
 </p>
