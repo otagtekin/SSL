@@ -33,7 +33,7 @@ app.get('/',function(req,res) // tell framework that when someone types the root
 </span>
 <p>
 	<b>Nodemon</b><br>
-	Nodemon is service that monitors your node application and detects changes to your code. If there is change in the code it automaticsally restarts the server saving you from manually 
+	Nodemon is service that monitors your node application and detects changes to your code. If there is change in the code it automatically restarts the server saving you from manually 
 	doing the work.
 </p>
 <p>https://www.npmjs.com/package/nodemon</p>
@@ -44,12 +44,14 @@ app.get('/',function(req,res) // tell framework that when someone types the root
 	<br>
 	to start server
 	<br>
-	nodemon app.js 
+	Via the CLI, use either --legacy-watch or -L for short:
+	<br>nodemon app.js -L 
 	<br>
 	or<br>
-	nodemon server.js
+	nodemon server.js -L
 </span>
 <p>
+	Now you dont have to keep restarting the app manually. Nodemon keep tracks of the code changes!<br>
 <b>Display html page</b><br>
 Now let's create and html login form and display it in our application.
 </p>
