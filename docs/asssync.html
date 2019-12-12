@@ -1,0 +1,83 @@
+
+<span style="color: #cc4b00;font-weight: bold;">Web Server</span><br><br>
+
+<p>
+<b><span class="btitle">Overview</span></b>
+<br>Fix Sync/Async
+<br>
+</p>
+
+<b><span class="btitle">Description</span></b>
+<p>Using the information you have learned correct the application below.</p>
+<b><span class="btitle">Instructions</span></b>
+<p><ul>
+<li>Using Node Sync/Async knowledge and online resources correct the problems on the following code</li>
+<li>There are 10 errors!</li>
+<li> 
+<span class="code"> 
+	
+<Br>var http = require('htt');
+
+<Br>var myname = functon(){
+
+    <Br>&nbsp;&nbsp;console.log("Here is my IP address");
+<Br>}
+
+<Br>function callHttpbi() {  
+  
+
+  <Br>&nbsp;&nbsp;let promise = new Promise((resolve, reject) => {
+
+      <Br>&nbsp;&nbsp;&nbsp;&nbsp;http.get(
+          <Br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'http://httpbin.org/ip',
+          <Br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;function(response) {
+            <Br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var str="";
+            <Br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;response.setEncoding('utf8');
+            <Br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;response.on('data', function(data){
+                <Br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;str += data;
+            <Br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;});
+          
+            <Br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;response.on('end', function() {
+                <Br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var result = JSON.parse(str);
+                <Br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;myips = result.origin;
+                <Br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;resolve()
+            <Br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}); 
+          <Br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+      <Br>&nbsp;&nbsp;&nbsp;&nbsp;);
+
+  <Br>});
+  
+  <Br><Br>let result = await promise;
+  <Br>result;    
+  
+<Br>}
+
+
+<Br>function executeAsyncTask(){
+
+    <Br>&nbsp;&nbsp;const valueA = await callHttpbin()
+    <Br>&nbsp;&nbsp;const valueB = myname();
+    <Br>&nbsp;&nbsp;console.log(valueB+" "+valueA)
+
+
+
+<Br>// Here is my IP address 149.24.160.1, 149.24.160.1
+
+	</span>
+</ul></p>
+
+<p>
+<b><span class="btitle">Rubric</span></b>
+<ul>
+    <li></li>
+
+</ul>
+</p>
+<p>
+<b><span class="btitle">Deliverable</span></b>
+<ul>
+	<li>Copy paste your code the text area on FSO</li>
+    <li>Here is my IP address 149.24.160.1, 149.24.160.1</li>
+</ul>
+</p>
+

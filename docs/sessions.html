@@ -4,3 +4,16 @@
 	<b>Using sessions</b>
 	
 </p>
+
+<br> Session are really important for Web Applications. That's how we authenticatte users and also keep track of the authentication status.
+<br> Sessions are server-side and cookies are client. Users can not access sessions that's what makes them secure. Cookies on the other hand, are accessable via browser. Take a look at your console window and you should be able to see the button for cookies.
+
+<p>To enable sessions in our application, we will install express-sessions</p>
+<span class="code">>>sudo npm install -g express-session</span>
+	<p>Before watching the lecture video you should execute the command above!</p>
+		<p>To create session variables that can be available on all the other routes. You will execute some thing like</p>
+<span class="code">>>req.session.name="Mike";</span>
+<p>To remove or clear the session for logging out. You would execute something like</p>
+<span class="code">>>req.session.destroy(function(error){});</span>
+<p>Now let's build the rest of the functionality</p>
+<a href="https://youtu.be/axOMWAuufpA">Follow me here</a>

@@ -42,3 +42,43 @@
 	<b>Async</b><br>
 	Here is a sample of asynchronous call.
 </p>
+<span class="code">
+<Br><b>// Default is async</b>
+<Br>const fs = require('fs')
+
+
+
+<Br>fs.readFile('myfile.txt', 'utf-8', (err, data) => {
+  <Br>&nbsp;&nbsp;if (err) throw err;
+  <Br>&nbsp;&nbsp;console.log(data)
+<Br>});
+
+
+<Br>var name = "orcun";
+<Br>console.log(name);
+
+
+
+<Br><Br><b>// Let's make it sync</b>
+<Br>async function returnTrue() {
+  
+   <Br>&nbsp;&nbsp;var name = "orcun";
+
+  <Br>&nbsp;&nbsp;let promise = new Promise((resolve, reject) => {
+  	<Br>&nbsp;&nbsp;&nbsp;&nbsp;fs.readFile('myfile.txt', 'utf-8', (err, data) => {
+  	<Br>&nbsp;&nbsp;&nbsp;&nbsp;if (err) throw err;
+  	<Br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;resolve(data)
+	<Br>&nbsp;&nbsp;&nbsp;&nbsp;});     
+  <Br>&nbsp;&nbsp;});
+  
+
+  <Br>&nbsp;&nbsp;let result = await promise;
+ 	
+  <Br>&nbsp;&nbsp;console.log(result)
+  <Br>&nbsp;&nbsp;console.log(name);
+  
+  
+<Br>}
+
+<Br>returnTrue();
+</span>

@@ -2,12 +2,13 @@
 
 <p>
 	<b>NPM</b><br>
+	<b>Note:</b> Remember to test your npm and node before installing packages.<br>
 	When we install node in our system, it comes with a built-in tool called, node package manager (NPM). This tool is design to install libraries and modules required for our code to run.
 	<br>
 	Here it is a sample npm command. 
 </p>
 <span class="code">
-	>> npm install express;
+	>> sudo npm install -g express;
 </span>
 <p>
 	<b>Express</b><br>
@@ -31,6 +32,17 @@ app.get('/',function(req,res) // tell framework that when someone types the root
 <Br>var server=app.listen(3000,function() {}); // start the server by using the previous instructions.
 
 </span>
+
+
+<p>
+	<b>Requests</b><br>
+Requests are calls made to target destination like Twitter,Google API, or your own server-side. There are several request packages for Node. However, we will use "request" for this lecture. Go ahead and install it then continue with the lecture video.
+</p>
+<span class="code">
+	>> sudo npm install request;
+</span>
+
+
 <p>
 	<b>Nodemon</b><br>
 	Nodemon is service that monitors your node application and detects changes to your code. If there is change in the code it automatically restarts the server saving you from manually 
@@ -54,4 +66,7 @@ app.get('/',function(req,res) // tell framework that when someone types the root
 	Now you dont have to keep restarting the app manually. Nodemon keep tracks of the code changes!<br>
 <b>Display html page</b><br>
 Now let's create and html login form and display it in our application.
+<a href="https://youtu.be/CEmoFPWXc4c" target="_blank">Follow me here</a>
+<br> Add this to top of your app.js
+<span class="code">"use strict";</span>
 </p>
