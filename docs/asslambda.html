@@ -1,0 +1,77 @@
+
+<span style="color: #cc4b00;font-weight: bold;">Lambda and Endpoint Integration</span><br><br>
+
+<p>
+<b><span class="btitle">Overview</span></b>
+<br>Now that you have practiced creating several AWS services, it's time to put them together. You are asked to use the node app in your ec2 server and make a request to your endpoint to build a login functionality. 
+<br><br>
+</p>
+
+<b><span class="btitle">Description</span></b>
+<p>Using the endpoint for your Node App in your server.</p>
+<b><span class="btitle">Instructions</span></b>
+<p><ul>
+<li>Use your node app in your ec2 and extend it's functionality</li>
+<li>You already have the knowledge from your previous lectures to do this</li>
+<li>You are asked to consume the data from your AWS endpoint and build a small login functionality</li>
+<li>You do not need to log out or need bootstrap functionalities.</li>
+<li>Create a route for the login form</li>
+<li>Create a route for login-action where you check against the user's input vs the endpoint.</li>
+<li>Display the outcome. I have given you the template code to use with your app/server.js. All you need to do is to fill-in the blanks.</li>
+<li>Show output and give users a way to correct their errors if there are any. Otherwise show success information.</li>
+</ul>
+</p>
+
+<span class="code">
+    
+<br>"use strict"
+
+<br>var express= require("express");
+<br>//MISSING LIBRARY CHECK YOUR ERRORS ON THE CONSOLE
+<br>var app=express();
+<br>var router = express.Router();
+<br>const bodyParser = require("body-parser");
+<br>app.use(bodyParser.urlencoded({extended : true}));
+<br><br>router.get("/form",function(req,res){
+
+        <br>&nbsp;&nbsp;&nbsp;var html =""; // Create your html form here
+        <br>&nbsp;&nbsp;&nbsp;res.send(html);
+<br>})
+
+<br><br>router.post("/awsdata",function(req,res){
+<br>&nbsp;var email = req.body.??; // Complete the missing pieces
+<br>&nbsp;var password = req.body.??;// Complete the missing pieces
+
+<br>&nbsp;request("YOUR END POINT URL HERE",{json:true},(err,response,body)=>{
+ <br>&nbsp;&nbsp;if(err){return console.log(err)};
+        <br>&nbsp;&nbsp;if(body.Count>0){
+                &nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;//DISPLAY VALID RESPONSE
+        <br>&nbsp;&nbsp;}else{
+                &nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;//DISPLAY ERROR RESPONSE
+        <br>&nbsp;&nbsp;}
+<br>&nbsp;})
+
+
+<br>})
+
+
+<br>app.use("/",router);
+<br>app.listen("8080");
+
+</span>
+<p>
+<b><span class="btitle">Rubric</span></b>
+<table>
+<tr><td>Routes are created correctly</td><td>20.00%</td></tr>
+<tr><td>Request to endpoint exists</td><td>20.00%</td></tr>
+<tr><td>Request result is handled correctly</td><td>25.00%</td></tr>
+<tr><td>Response is handled in login logic</td><td>25.00%</td></tr>
+<tr><td>Delivery 6  Video URL of all submissions2</td><td>10.00%</td></tr>
+</table>
+</p>
+<p>
+<b><span class="btitle">Deliverable</span></b>
+<ul>
+	<li>Create a demo video of all the steps and post it in the text area on FSO Assingment Submission</li>
+</ul>
+</p>

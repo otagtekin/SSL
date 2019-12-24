@@ -1,0 +1,74 @@
+<span style="color: #cc4b00;font-weight: bold;">Serverless Scripting</span><br><br>
+
+<p>
+	<b>Using Lambda</b>
+	
+
+
+<br> Lambda is AWS container for running code without provisioning servers. All you have to do is to be able to write a code in one of the supported languages. Lambdas can reach out to the external endpoints and also can interact with other AWS services.
+</p>
+<p>To take a look at lambda, login to your AWS console and click on "lambda" from the list.</p>
+
+
+
+<p><b>Now let's build our first lambda</b>
+<span class="code">
+<br>var AWS = require("aws-sdk");
+<br>var dynamoDb = new AWS.DynamoDB();
+
+
+<br>exports.handler = function(event, context,callback) {
+    
+    <br>&nbsp;async function f(event) {
+        
+       <br>&nbsp;return await new Promise((resolve, reject) => {
+            
+            <br>&nbsp;var params = {
+                
+            <br>&nbsp;TableName:"myssltable",
+            <br>&nbsp;FilterExpression: '#email = :email and #password=:password',
+            <br>&nbsp;ExpressionAttributeNames: {
+                <br>&nbsp;&nbsp;'#email': 'email',
+                <br>&nbsp;&nbsp;'#password': 'password',
+            <br>&nbsp;},
+                <br>&nbsp;ExpressionAttributeValues: {
+                <br><br>&nbsp;':email': {'S': event.queryStringParameters.email},
+                <br><br>&nbsp;':password': {'S': event.queryStringParameters.password}
+                <br>&nbsp;}
+                
+            <br>&nbsp;}
+            <br>&nbsp;dynamoDb.scan(params, (error, data) => {
+                <br>&nbsp;if (error) {
+                    <br>&nbsp;&nbsp;console.log(error.stack);
+                <br>&nbsp;}else{
+                    
+                    <br>&nbsp;&nbsp;//console.log(JSON.stringify(data));
+                    <br>&nbsp;&nbsp;callback(null,{
+                        
+                       <br> &nbsp;&nbsp;statusCode:200,
+                        <br>&nbsp;&nbsp;body:JSON.stringify(data),
+                        <br>&nbsp;&nbsp;headers:{"Content-type":"application:json"}
+                        
+                    <br>&nbsp;})    
+                <br>&nbsp;}
+            <br>})
+            
+        <br>})
+        
+    <br>}
+    
+    <br>f(event)
+    <br>//aws Gatey myawsurl.lambda?email=mike@aol.com&password=1234
+    
+<br>}
+
+</span>
+</p>
+
+<p><b>Let's build our first DynamoDb and AWS Endpoint</b>
+<br> 
+AWS Console let's you select several database type like MySql, Mongo, etc. We will pick DynamoDB as our object based AWS database. Very similar to FireBase or Mongo but it is made by AWS.
+<br>
+AWS Endpoint way to expose your API or resource using a serverless setup. You can read about AWS Endpoints at <a href="https://docs.aws.amazon.com/general/latest/gr/rande.html" target="_blank">AWS Endpoints</a>
+<br><a href="https://youtu.be/axOMWAuufpA">Follow me here</a>
+</p>

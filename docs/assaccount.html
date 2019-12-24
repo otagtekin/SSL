@@ -1,0 +1,116 @@
+
+<span style="color: #cc4b00;font-weight: bold;">AWS Services</span><br><br>
+
+<p>
+<b><span class="btitle">Overview</span></b>
+<br>Get familiar with AWS services
+<br><br>
+</p>
+
+<b><span class="btitle">Description</span></b>
+<p>This assingment is going to cover some of the important Amazon Web Services and get you started with elastic cloud and server-less scripting. You will be need to fix errors related to Node application and find your way around an actual Linux server.</p>
+<b><span class="btitle">Instructions</span></b>
+<p><ul>
+<li>Watch the lectures about Cloud</li>
+<li>Create an AWS account ( You can cancel your account after class, you would not be charged for free tier services)</li>
+<li>Go to "Compute" and Launch an EC2 Free Tier instance.</li>
+<li>Select a Free Tier Ubuntu Server 18.04 Amazon Linux Image</li>
+<li>Select t2.micro Free Tier</li>
+<li>Click to Configure Instance Details</li>
+<li>Configure Instance Details</li>
+<li>Change "Auto-assign Public IP" to enable</li>
+<li>Click on add storage and leave the default values</li>
+<li>Click on Review and Launch</li>
+<li>Click on Launch</li>
+<li>Change option to "Create new key pair"</li>
+<li>Type the name of the keypair (anything)</li>
+<li>Click on "Download" (if you loose these you can access to that server and need to start over)</li>
+<li>Click on Launch Instance</li>
+<li>Click on Launch View Instances</li>
+<li>Once the EC2 is changed from "Pending" to "Running" continue</li>
+<li>Find the IPv4 Public IP address and take a screen-shot</li>
+<li>open terminal and access to this ec2</li>
+</ul></p>
+
+
+<span class="code">
+    
+>> ssh -i youkey.pem ec2-user@ipnumber
+
+</span>
+
+<p>
+    You will get an error about the wrong permission. Look at the screen-shots to fix this issue.
+    <br>
+    You will than be able to login to your ec2 after that execute the commands and take scree-shots.
+</p>
+
+<ul>
+    <li>run command "whoami" and take a screen-shot ( this should be ec2-user)</li>
+    <li>run command "pwd" and take a screen-shot (this should be /home/ec2-user)</li>
+    <li>run command "sudo yum update type y"</li>
+    <li>Follow this page to setup node https://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/setting-up-node-on-ec2-instance.html</li>
+    <li>Screen-shot the output of the "node -e "console.log('Running Node.js ' + process.version)"</li>
+</ul>
+
+<b><span class="btitle">Let's open ports to our Node Server</span></b>
+<ul>
+<li>Click on "EC2" (Home page)</li>
+<li>Click on "Security Groups"</li>
+<li>Select "launch-wizard-1"</li>
+<li>Click on "Actions"</li>
+<li>Click on "Inbound"</li>
+<li>Click on "Add Rule" and enter Port Range (8080)</li>
+<li>Click on "Save"</li>
+</ul>
+
+<b><span class="btitle">Go back to your SSH window in your server</span></b>
+<ul>
+
+<li>Create a app.js file 
+    <br> In your terminal window execute vi app.js and hit i (to insert) and write the code given below. Once you are done writing.
+    <br> To save "shift + :")
+    <br> Type w! to write the file
+    <br> again shift + :"
+    <br>type q to quit
+    <br> You can repeat this process if you have errors and/or need to edit the document.
+</li>
+
+<span class="code">
+"use strict"
+<br>var express= require("express");
+<br>var request = require("request");
+<br>var app=express();
+<br>var router = express.Router();
+
+<br><br>router.get("/",function(req,res){
+<br>console.log("Here");
+<br>res.send("Hello by Your Name");
+<br>})
+<br><br>app.use("/",router);
+<br>app.listen("8080");
+</span></li>
+<li>run node app.js</li>
+<li>Fix errors if any</li>
+<li>Go to your browser and use the public ip address of the server with the port number http://youpublicip:8080</li>
+<li>Take a screen shot</li>
+</ul>
+   
+<p>
+<b><span class="btitle">Rubric</span></b>
+<table>
+<tr><td>EC2 Created</td><td>10.00%</td></tr>
+<tr><td>Succesffull SSH connection</td><td>10.00%</td></tr>
+<tr><td>Node is running on ec2</td><td>20.00%</td></tr>
+<tr><td>Ports are opened correctly</td><td>10.00%</td></tr>
+<tr><td>Node app functions on ec2</td><td>20.00%</td></tr>
+<tr><td>App is availabe on public IP</td><td>20.00%</td></tr>
+<tr><td>Delivery 6  Video URL of all submissions</td><td>10.00%</td></tr>
+</table>
+</p>
+<p>
+<b><span class="btitle">Deliverable</span></b>
+<ul>
+	<li>Create a demo video of all the steps and post it in the text area on FSO Assingment Submission</li>
+</ul>
+</p>

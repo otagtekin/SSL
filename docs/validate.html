@@ -4,86 +4,55 @@
 You have already used all of the functionalites assigned here. Please refer to your previous lecture to complete this assingment. You should not need any outside help to successfully complete the assingment.
 
 
+Use ejs templating engine to create form include.
+This file must be a seperate include. (Just like your nav)
+You must validate all the input types stated here.
+<ul>
+<li>First and Last Name</li>
+<li>Address</li>
+<li>City</li>
+<li>State</li>
+<li>Zip</li>
+<li>Age (dropdown)</li>
+<li>Gender (radio)</li>
+<li>Consent(checkmark)</li>
+<li>Bio (Textarea)</li>
+</ul>
 
-
-Create dynamic page with Python
-
-Ask users howmany input fields
-Ask users type of input tags keep it to number and text
-Ask users the server side page for the action attribute
-Ask users method type
-Output files in the same directory Form page and ThankYou page
-
-
-Using Node load the pages in the web server
-Using Node setup routes and handle the form submission
-Only check if input fields have value or not
-If it fails redirect them to the form
-If not take them to the thank you page
-
-load html file and validate Create python file, read with node Create with node, read with ruby Create cron job with C and detect with node Assingment 1 node Form validation, file read and write, streams, modules
 </p>
 
 <p>
 
 <b><span class="btitle">Overview</span></b>
 
-<br><br>Your first assingment consists of several server-side and client-side languages. You are asked to generate an HTML page using one server-side language and build a validator functionality using another.
+<br><br>Your first assingment consists of several server-side and client-side languages. You are asked to generate an HTML page using node Ejs templating and build a validator functionality using the lecture content. You must validate inputs using server-side. Client-side validation is optional.
 
 <br><br><b><span class="btitle">Description</span></b>
-<br><br>You have learned how to create an HTML form in your previous classes. You may use those html pages as your guide however, since you will be generating the page by asking questions to your users, you won't need it. You will use what we have covered in the lectures this week and these are exteremly important practices in the industry as you will be parsing, importing, generating, reading, and writing external resources as a developer.
+<br><br>You will use what we have covered in the lectures this week and these are exteremly important practices in the industry as you will be parsing, importing, generating, reading, and writing external resources as a developer.
 
 <br><br><b><span class="btitle">Instructions</span></b>
 <br><br><b>Part 1</b><ul>
-<li>Start with your terminal window and make sure you navigate into the directory where you will be pushing your code to your repo.</li>
-<li>Create a directory SSL_Assingment_1</li>
-<li>Navigate into the directory</li>
-<li>Create a python file and create the following functionality</li>
-<li>Ask users howmany input fields they want to add to their form</li>
-<li>Start asking users for type of the each input fields, one by one, and keep track of it.</li>
-<li>Ask the title of the form</li>
-<li>Ask the destination of the form (Where do you want your form to submit)</li>
-<li>In the end, your code should output a form.html with all the contents in it</li>
-<li>You only need the append the input fields and the title to the pre-designed form.</li>
-
+<li>You should have a login form validation by now</li>
+<li>Duplicate the form for login and convert it to a registration form</li>
+<li>Create all the required input fields</li>
+<li>You should have a seperate route for this</li>
+<li>Create sucessful and un-succesfull responses to your users/li>
 <br>
-<div class="code">
-Ex:
-
-<br>
-&lt;form action="****** APPEND USER DESTINATION HERE******" method="post"&gt;
-	<br>**** APPEND USER INPUTS HERE ****
-	<br>&lt;input type="submit" name=""&gt;
-<br>&lt;/form&gt;
-</div>
-
-
-<li>
-Show errors in command line if there are any or tell users the file is created under the same directory.
-</li>
 </ul>
 <p>
-<b>Part 2</b>
-<ul>
-<li>Use Node to validate user input</li>
-<li>First start your server and make sure you can see the form generated in part 1</li>
-<li>This page should have an HTML form with the input fields generated</li>
-<li>Upon form submission this form should submit to a destination url.</li>
-<li>Create a route path in you Node file to display this html page.</li>
-<li>Create a route path to receive the submitted form values.</li>
-<li>Validate all inputs.
-<li>Display errors if there are any, if not take users to a new route where you display the success message</li>
-<li>You must validate every input field!</li>
-<li>You must display error response(s).</li>
-<li>You must transfer user to success page upon valid submission.</li>
-</ul>
 
 <br><b><span class="btitle">Rubric</span></b>
-
+<table>
+<tr><td>Ejs created with all inputs</td><td>30.00%</td></tr>
+<tr><td>All inputs are validated</td><td>30.00%</td></tr>
+<tr><td>Errors and Success shown in results</td><td>30.00%</td></tr>
+<tr><td>Delivery 3 contains GIT & Video URL</td><td>10.00%</td></tr>
+</table>
 
 <br><br><b><span class="btitle">Deliverable</span></b>
 <ul>
 	<li>You must submit a GIT repo and demo video for a credit.</li>
 	<li>Submit a link to your assingment in your GIT repo.</li>
 	<li>Submit a short/unlisted video link for your demo video in YouTube</li>	
+</ul>
 </p>
